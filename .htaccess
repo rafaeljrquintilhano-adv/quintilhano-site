@@ -1,20 +1,21 @@
-# A home institucional esta em index.html. O WordPress antigo permanece
-# disponivel apenas para fornecer os recursos usados pela landing page.
+# A home institucional esta em index.html.
 DirectoryIndex index.html index.php
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
   # Normaliza acessos antigos/com maiuscula para a URL publica desejada.
-  RewriteCond %{THE_REQUEST} \s/+Prev(?:/index\.html)?[\s?] [NC]
-  RewriteRule ^Prev(?:/index\.html)?/?$ /prev/ [R=301,L]
+  RewriteCond %{THE_REQUEST} \s/+Prev(?:/index\.html)?/?(?:[?\s])
+  RewriteRule ^Prev(?:/index\.html)?/?$ /prev/ [R=301,L,NE]
+
+  RewriteCond %{THE_REQUEST} \s/+prev(?:[?\s]) [NC]
+  RewriteRule ^prev$ /prev/ [R=301,L,NE]
 
   RewriteCond %{THE_REQUEST} \s/+prev/index\.html[\s?] [NC]
-  RewriteRule ^prev/index\.html$ /prev/ [R=301,L]
+  RewriteRule ^prev/index\.html$ /prev/ [R=301,L,NE]
 
-  # URL publica canonica da landing page previdenciaria.
-  # Compatibilidade com a pasta local ainda chamada "Prev".
-  RewriteCond %{DOCUMENT_ROOT}/prev !-d
-  RewriteCond %{DOCUMENT_ROOT}/Prev -d
-  RewriteRule ^prev/?$ Prev/index.html [L]
+  # A landing e todos os seus recursos sao estaticos e independentes do
+  # WordPress. Isso mantem CSS, JavaScript e imagens funcionando em /prev/.
+  RewriteRule ^prev/?$ landing-pages/auxilio-acidente/index.html [L]
+  RewriteRule ^prev/(.+)$ landing-pages/auxilio-acidente/$1 [L]
 </IfModule>
