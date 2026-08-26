@@ -1,0 +1,20 @@
+# A home institucional esta em index.html. O WordPress antigo permanece
+# disponivel apenas para fornecer os recursos usados pela landing page.
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Normaliza acessos antigos/com maiuscula para a URL publica desejada.
+  RewriteCond %{THE_REQUEST} \s/+Prev(?:/index\.html)?[\s?] [NC]
+  RewriteRule ^Prev(?:/index\.html)?/?$ /prev/ [R=301,L]
+
+  RewriteCond %{THE_REQUEST} \s/+prev/index\.html[\s?] [NC]
+  RewriteRule ^prev/index\.html$ /prev/ [R=301,L]
+
+  # URL publica canonica da landing page previdenciaria.
+  # Compatibilidade com a pasta local ainda chamada "Prev".
+  RewriteCond %{DOCUMENT_ROOT}/prev !-d
+  RewriteCond %{DOCUMENT_ROOT}/Prev -d
+  RewriteRule ^prev/?$ Prev/index.html [L]
+</IfModule>
