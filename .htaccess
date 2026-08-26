@@ -5,7 +5,7 @@ DirectoryIndex index.html index.php
   RewriteEngine On
 
   # Normaliza acessos antigos/com maiuscula para a URL publica desejada.
-  RewriteCond %{THE_REQUEST} \s/+Prev(?:/index\.html)?/?(?:[?\s])
+  RewriteCond %{THE_REQUEST} \s/+Prev(?:/index\.html)?/?(?:[?\s]) [NC]
   RewriteRule ^Prev(?:/index\.html)?/?$ /prev/ [R=301,L,NE]
 
   RewriteCond %{THE_REQUEST} \s/+prev(?:[?\s]) [NC]
@@ -14,8 +14,9 @@ DirectoryIndex index.html index.php
   RewriteCond %{THE_REQUEST} \s/+prev/index\.html[\s?] [NC]
   RewriteRule ^prev/index\.html$ /prev/ [R=301,L,NE]
 
-  # A landing previdenciaria oficial esta na pasta "Prev". A URL publica
-  # permanece em minusculas e todos os recursos sao resolvidos nessa pasta.
-  RewriteRule ^prev/?$ Prev/index.html [L]
-  RewriteRule ^prev/(.+)$ Prev/$1 [L]
+  # Compatibilidade para recursos solicitados por versoes antigas/cacheadas da
+  # landing em /prev/.
+  RewriteRule ^prev/assets/(.+)$ landing-pages/auxilio-acidente/assets/$1 [L]
+  RewriteRule ^prev/script\.js$ landing-pages/auxilio-acidente/script.js [L]
+  RewriteRule ^prev/styles\.css$ assets/css/landing-pages/auxilio-acidente.css [L]
 </IfModule>
