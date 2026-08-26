@@ -212,15 +212,15 @@ footer { padding: 45px 0 28px; border-top: 1px solid var(--line-dark); backgroun
   .brand img { width: 40px; height: 40px; }
   .brand strong { font-size: 17px; }
   .brand small { font-size: 7px; }
-  .header-link { font-size: 0; }
-  .header-link span { font-size: 22px; }
-  .hero-grid { padding-top: 125px; padding-bottom: 105px; }
-  h1 { font-size: clamp(45px, 14vw, 62px); }
-  .hero-highlight { font-size: 27px; }
+  .header-link { flex: 0 0 auto; margin-left: 12px; font-size: 9px; white-space: nowrap; }
+  .header-link span { font-size: 14px; }
+  .hero-grid { gap: 48px; padding-top: 112px; padding-bottom: 92px; }
+  h1 { font-size: clamp(38px, 12vw, 54px); line-height: 1.02; }
+  .hero-highlight { font-size: clamp(23px, 7.2vw, 29px); }
   .hero-lead { font-size: 15px; }
   .button { width: 100%; gap: 14px; padding-inline: 18px; }
   .situations, .audience, .why, .final-cta { padding: 85px 0; }
-  .situations h2, .audience h2, .section-heading h2, .faq-title h2, .final-cta h2 { font-size: 43px; }
+  .situations h2, .audience h2, .section-heading h2, .faq-title h2, .final-cta h2 { font-size: clamp(34px, 10vw, 43px); }
   .marquee img { width: 190px; }
   .check-list { grid-template-columns: 1fr; }
   .notification-stack { min-height: 410px; }
@@ -241,8 +241,9 @@ footer { padding: 45px 0 28px; border-top: 1px solid var(--line-dark); backgroun
 
 @media (max-width: 380px) {
   .brand strong { font-size: 15px; }
-  h1 { font-size: 42px; }
-  .situations h2, .audience h2, .section-heading h2, .faq-title h2, .final-cta h2 { font-size: 38px; }
+  h1 { font-size: 36px; }
+  .hero-highlight { font-size: 22px; }
+  .situations h2, .audience h2, .section-heading h2, .faq-title h2, .final-cta h2 { font-size: 33px; }
   .notification-stack img { width: 92%; }
   .accordion summary { font-size: 16px; }
 }
