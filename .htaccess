@@ -14,8 +14,8 @@ DirectoryIndex index.html index.php
   RewriteCond %{THE_REQUEST} \s/+prev/index\.html[\s?] [NC]
   RewriteRule ^prev/index\.html$ /prev/ [R=301,L,NE]
 
-  # A landing e todos os seus recursos sao estaticos e independentes do
-  # WordPress. Isso mantem CSS, JavaScript e imagens funcionando em /prev/.
-  RewriteRule ^prev/?$ landing-pages/auxilio-acidente/index.html [L]
-  RewriteRule ^prev/(.+)$ landing-pages/auxilio-acidente/$1 [L]
+  # A landing previdenciaria oficial esta na pasta "Prev". A URL publica
+  # permanece em minusculas e todos os recursos sao resolvidos nessa pasta.
+  RewriteRule ^prev/?$ Prev/index.html [L]
+  RewriteRule ^prev/(.+)$ Prev/$1 [L]
 </IfModule>
