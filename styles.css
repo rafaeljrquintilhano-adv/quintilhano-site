@@ -428,10 +428,32 @@ body {
 
 @media (max-width: 620px) {
   .hero-logo {
-    top: 132px;
-    right: -24px;
-    width: 230px;
-    opacity: .18;
+    display: none;
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    width: calc(100vw - 28px);
+    max-width: calc(100vw - 28px);
+    margin-inline: auto;
+  }
+
+  .hero-copy {
+    width: calc(100vw - 28px);
+    min-width: 0;
+    max-width: calc(100vw - 28px);
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(38px, 11vw, 44px);
+    letter-spacing: -.035em;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-lead {
+    max-width: 100%;
+    overflow-wrap: anywhere;
   }
 }
 
