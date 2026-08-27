@@ -12,6 +12,20 @@
   --serif: Georgia, "Times New Roman", serif;
 }
 
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 /* Scrollbar alinhada à identidade visual do site. */
 html {
   scrollbar-color: var(--yellow) var(--near-black);
