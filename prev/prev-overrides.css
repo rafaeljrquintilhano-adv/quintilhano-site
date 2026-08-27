@@ -1,0 +1,50 @@
+@import url("../assets/css/landing-pages/auxilio-acidente.css");
+
+img,
+svg,
+video,
+iframe {
+	max-width: 100%;
+	height: auto;
+}
+
+.marquee { width: 100%; overflow: hidden; scrollbar-width: none; }
+.marquee::-webkit-scrollbar { display: none; }
+.marquee-track { animation: marquee-right 38s linear infinite; }
+.marquee-duplicate { display: flex; gap: 10px; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+.notification-reveal img { opacity: 1; transform: none; }
+.notification-reveal.is-pending img { opacity: 0; transform: translateY(42px); transition: opacity .75s ease, transform .75s cubic-bezier(.22,1,.36,1); }
+.notification-reveal.is-visible img { opacity: 1; transform: translateY(0); }
+.notification-reveal.is-visible img:nth-child(2) { transition-delay: .14s; }
+.notification-reveal.is-visible img:nth-child(3) { transition-delay: .28s; }
+.notification-reveal.is-visible img:nth-child(4) { transition-delay: .42s; }
+.benefit-icon-image { display: block; width: 72px; height: 72px; object-fit: contain; }
+.benefit-grid article { display: flex; flex-direction: column; align-items: flex-start; }
+.benefit-grid article .benefit-icon-image { flex: 0 0 72px; }
+.benefit-grid article h3 { min-height: 54px; margin-bottom: 16px; }
+.benefit-grid article p { margin-bottom: 0; }
+.notification-stack::before { content: ""; width: min(100%, 430px); height: min(100%, 430px); border: 0; background: url("../img/logo.png") center / contain no-repeat; opacity: .12; -webkit-text-stroke: 0; transform: translate(-50%, -50%) rotate(-7deg); }
+.whatsapp-float { width: auto; min-width: 118px; height: 40px; padding: 0 14px; border: 1px solid rgba(8,9,8,.35); border-radius: 999px; background: var(--yellow); color: var(--black); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; animation: contact-bounce 3.2s ease-in-out infinite; }
+.whatsapp-float:hover, .whatsapp-float:focus-visible { background: var(--yellow-bright); color: var(--black); }
+@keyframes contact-bounce {
+	0%, 72%, 100% { transform: translateY(0) scale(1); }
+	78% { transform: translateY(-5px) scale(1.02); }
+	84% { transform: translateY(0) scale(.99); }
+	90% { transform: translateY(-2px) scale(1.01); }
+}
+.hero::after { will-change: background-position; }
+.hero:hover::after { animation: grid-drift 9s ease-in-out infinite alternate; }
+@keyframes grid-drift {
+	from { background-position: 0 0, 0 0; }
+	to { background-position: 28px 18px, 28px 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.marquee-track { animation: none; }
+	.notification-reveal img { opacity: 1; transform: none; transition: none; }
+	.hero:hover::after { animation: none; }
+	.whatsapp-float { animation: none; }
+}
