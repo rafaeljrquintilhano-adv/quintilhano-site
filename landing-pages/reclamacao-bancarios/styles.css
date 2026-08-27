@@ -35,16 +35,17 @@
 .marquee-card small { color: #94938c; font-size: 11px; line-height: 1.4; }
 .marquee-card:hover small, .marquee-card:focus-visible small { color: #333229; }
 .marquee-duplicate { display: flex; gap: 10px; }
-.marquee { width: 100%; overflow: hidden; scrollbar-width: none; }
-.marquee::-webkit-scrollbar { display: none; }
-.marquee-track { display: flex; gap: 10px; width: max-content; padding: 0 24px 16px; animation: marquee-right 38s linear infinite; will-change: transform; }
+.marquee { display: block; width: 100%; overflow: hidden !important; scrollbar-width: none; }
+.marquee::-webkit-scrollbar { display: none; width: 0; height: 0; }
+.marquee-track { display: flex; gap: 10px; width: max-content; padding: 0 24px 16px; animation: marquee-right 38s linear infinite !important; will-change: transform; }
 .marquee-duplicate { display: flex; gap: 10px; }
 .marquee:hover .marquee-track, .marquee:focus-within .marquee-track { animation-play-state: paused; }
 @keyframes marquee-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
 .hero-background-video { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .7; filter: grayscale(.35) contrast(1.08); pointer-events: none; }
 .hero::before { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, rgba(8,9,8,.62) 0%, rgba(8,9,8,.35) 48%, rgba(8,9,8,.48) 100%), linear-gradient(180deg, rgba(8,9,8,.18), rgba(8,9,8,.48)); pointer-events: none; }
 .hero .hero-glow, .hero::after { z-index: 1; }
-.whatsapp-float { z-index: 9999; cursor: pointer; pointer-events: auto; }
+.whatsapp-float { z-index: 9999; cursor: pointer; pointer-events: auto; width: auto !important; min-width: 118px !important; height: 40px !important; padding: 0 14px !important; border: 1px solid rgba(8,9,8,.35) !important; border-radius: 999px !important; background: var(--yellow) !important; color: var(--black) !important; box-shadow: 0 12px 30px rgba(0,0,0,.28); font-size: 9px !important; letter-spacing: .08em; text-transform: uppercase; }
+.whatsapp-float:hover, .whatsapp-float:focus-visible { background: var(--yellow-bright) !important; color: var(--black) !important; }
 .hero::after { background-image: linear-gradient(180deg, transparent 65%, rgba(17,19,16,.96) 100%), linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px); background-size: auto, 60px 60px, 60px 60px; }
 .situations { background: linear-gradient(180deg, #111310 0, var(--near-black) 180px); }
 .scroll-cue { padding-bottom: 20px; }
