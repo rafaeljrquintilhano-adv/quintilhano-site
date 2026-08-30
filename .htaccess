@@ -5,6 +5,11 @@ ErrorDocument 404 /404.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # Evita redirecionamento de arquivos de indexacao e sitemap, para nao quebrar
+  # o acesso do Google Search Console e dos crawlers.
+  RewriteRule ^robots\.txt$ - [L]
+  RewriteRule ^sitemap\.xml$ - [L]
+
   # Redireciona para HTTPS e remove o www, mantendo a URL canonica do site.
   RewriteCond %{HTTPS} !=on [OR]
   RewriteCond %{HTTP_HOST} ^www\..* [NC]
