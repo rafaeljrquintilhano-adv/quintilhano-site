@@ -1,15 +1,30 @@
 const video = document.querySelector('[data-video]');
+const youtubeUrl = 'https://www.youtube.com/watch?v=m2ApLykFu-4&t=1s';
 
 if (video) {
   const cover = video.querySelector('.video-cover');
 
-  cover?.addEventListener('click', () => {
-    window.open(
-      'https://www.youtube.com/watch?v=m2ApLykFu-4&source_ve_path=MTc4NDI0',
-      '_blank',
-      'noopener,noreferrer'
-    );
+  const openVideo = (event) => {
+    if (event) event.preventDefault();
+    const popup = window.open(youtubeUrl, '_blank', 'noopener,noreferrer');
+    if (!popup) {
+      window.location.href = youtubeUrl;
+    }
+  };
+
+  cover?.addEventListener('click', openVideo);
+  cover?.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openVideo(event);
+    }
   });
+
+  if (cover && cover.tagName === 'A') {
+    cover.href = youtubeUrl;
+    cover.setAttribute('target', '_blank');
+    cover.setAttribute('rel', 'noopener noreferrer');
+  }
 }
 
 document.querySelectorAll('.accordion details').forEach((item) => {
