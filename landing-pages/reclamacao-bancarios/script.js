@@ -40,36 +40,29 @@
 
   if (video) {
     const cover = video.querySelector('.video-cover');
-    const localVideoUrl = '../../Vídeo/Quintilhano%20Conectando%20solu%C3%A7%C3%B5es%20jur%C3%ADdicas%2C%20cont%C3%A1beis%20e%20imobili%C3%A1rias%20em%20um%20s%C3%B3%20lugar.%20-%20Quintilhano%20Advocacia%20(1080p%2C%20h264%2C%20youtube).mp4';
+    const youtubeUrl = 'https://www.youtube.com/watch?v=m2ApLykFu-4&t=1s';
 
-    const injectVideoPlayer = () => {
-      const existingPlayer = video.querySelector('.local-video-player');
-      if (existingPlayer) {
-        existingPlayer.play();
-        return;
+    const openVideo = (event) => {
+      if (event) event.preventDefault();
+      const popup = window.open(youtubeUrl, '_blank', 'noopener,noreferrer');
+      if (!popup) {
+        window.location.href = youtubeUrl;
       }
-
-      const player = document.createElement('video');
-      player.className = 'local-video-player';
-      player.src = localVideoUrl;
-      player.controls = true;
-      player.autoplay = true;
-      player.playsInline = true;
-      player.preload = 'metadata';
-      player.setAttribute('playsinline', 'true');
-      player.setAttribute('controls', 'controls');
-
-      cover?.replaceWith(player);
-      player.focus();
     };
 
-    cover?.addEventListener('click', injectVideoPlayer);
+    cover?.addEventListener('click', openVideo);
     cover?.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
-        injectVideoPlayer();
+        openVideo(event);
       }
     });
+
+    if (cover && cover.tagName === 'A') {
+      cover.href = youtubeUrl;
+      cover.setAttribute('target', '_blank');
+      cover.setAttribute('rel', 'noopener noreferrer');
+    }
   }
 
   document.querySelectorAll('.accordion details').forEach((item) => {

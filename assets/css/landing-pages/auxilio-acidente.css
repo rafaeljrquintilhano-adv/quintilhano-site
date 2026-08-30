@@ -163,6 +163,7 @@ h1 em, h2 em { color: var(--yellow); font-style: normal; }
 .video-cover { position: relative; display: block; width: 100%; padding: 0; border: 0; background: #000; cursor: pointer; overflow: hidden; }
 .video-cover img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; transition: transform .45s ease, opacity .3s ease; }
 .video-cover:hover img { transform: scale(1.025); opacity: .78; }
+.local-video-player { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; border: 0; }
 .play { position: absolute; inset: 50% auto auto 50%; display: grid; place-items: center; width: 74px; height: 74px; padding-left: 5px; border: 1px solid rgba(255,255,255,.68); border-radius: 50%; background: rgba(0,0,0,.64); color: var(--yellow); transform: translate(-50%,-50%); }
 .video-card iframe { display: block; width: 100%; aspect-ratio: 16/9; border: 0; }
 .scroll-cue { position: absolute; z-index: 3; bottom: 28px; left: 50%; color: #aaa99f; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; transform: translateX(-50%); }
