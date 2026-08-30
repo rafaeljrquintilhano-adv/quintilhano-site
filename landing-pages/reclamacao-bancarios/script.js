@@ -1,33 +1,82 @@
-const landingScript = document.createElement('script');
-landingScript.src = '../../landing-pages/auxilio-acidente/script.js';
-document.currentScript.after(landingScript);
+(function () {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const heroBackgroundVideo = document.querySelector('.hero-background-video');
+  const situationStrip = document.querySelector('.situation-strip');
+  const whatsappUrl = 'https://api.whatsapp.com/message/IVSTMA4FQGFDD1?autoload=1&app_absent=0';
 
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const heroBackgroundVideo = document.querySelector('.hero-background-video');
-const situationStrip = document.querySelector('.situation-strip');
-const whatsappUrl = 'https://api.whatsapp.com/message/IVSTMA4FQGFDD1?autoload=1&app_absent=0';
+  document.querySelectorAll('a[href="https://wa.me/message/IVSTMA4FQGFDD1"]').forEach((link) => {
+    link.href = whatsappUrl;
+  });
 
-document.querySelectorAll('a[href="https://wa.me/message/IVSTMA4FQGFDD1"]').forEach((link) => {
-	link.href = whatsappUrl;
-});
+  if (heroBackgroundVideo) {
+    const slowVideo = () => {
+      heroBackgroundVideo.muted = true;
+      heroBackgroundVideo.playsInline = true;
+      heroBackgroundVideo.setAttribute('playsinline', 'true');
+      heroBackgroundVideo.setAttribute('webkit-playsinline', 'true');
+      heroBackgroundVideo.playbackRate = 0.45;
 
-if (heroBackgroundVideo) {
+      heroBackgroundVideo.play().catch(() => {
+        window.addEventListener('pointerdown', () => heroBackgroundVideo.play().catch(() => {}), { once: true });
+      });
+    };
 
-	const slowVideo = () => {
-		heroBackgroundVideo.playbackRate = 0.45;
-	};
+    heroBackgroundVideo.addEventListener('loadedmetadata', slowVideo);
+    heroBackgroundVideo.addEventListener('canplay', slowVideo);
+    slowVideo();
+  }
 
-	slowVideo();
-	heroBackgroundVideo.addEventListener('loadedmetadata', slowVideo);
-}
+  if (situationStrip && !reducedMotion) {
+    const moveStrip = () => {
+      if (situationStrip.scrollWidth > situationStrip.clientWidth && situationStrip.scrollLeft === 0) {
+        situationStrip.scrollTo({ left: 1, behavior: 'smooth' });
+      }
+    };
 
-if (situationStrip && !reducedMotion) {
+    window.addEventListener('load', moveStrip, { once: true });
+  }
 
-	const moveStrip = () => {
-		if (situationStrip.scrollWidth > situationStrip.clientWidth && situationStrip.scrollLeft === 0) {
-			situationStrip.scrollTo({ left: 1, behavior: 'smooth' });
-		}
-	};
+  const video = document.querySelector('[data-video]');
 
-	window.addEventListener('load', moveStrip, { once: true });
-}
+  if (video) {
+    const cover = video.querySelector('.video-cover');
+
+    cover?.addEventListener('click', () => {
+      window.open(
+        'https://www.youtube.com/watch?v=m2ApLykFu-4&source_ve_path=MTc4NDI0',
+        '_blank',
+        'noopener,noreferrer'
+      );
+    });
+  }
+
+  document.querySelectorAll('.accordion details').forEach((item) => {
+    item.addEventListener('toggle', () => {
+      if (!item.open) return;
+      document.querySelectorAll('.accordion details[open]').forEach((openItem) => {
+        if (openItem !== item) openItem.open = false;
+      });
+    });
+  });
+
+  const backToTop = document.createElement('button');
+  backToTop.className = 'back-to-top';
+  backToTop.type = 'button';
+  backToTop.setAttribute('aria-label', 'Voltar ao topo');
+  backToTop.title = 'Voltar ao topo';
+  backToTop.innerHTML = '<span aria-hidden="true">↑</span>';
+  document.body.appendChild(backToTop);
+
+  const updateBackToTop = () => {
+    const isVisible = window.scrollY > 420;
+    backToTop.classList.toggle('is-visible', isVisible);
+    backToTop.tabIndex = isVisible ? 0 : -1;
+  };
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+  });
+
+  window.addEventListener('scroll', updateBackToTop, { passive: true });
+  updateBackToTop();
+})();
