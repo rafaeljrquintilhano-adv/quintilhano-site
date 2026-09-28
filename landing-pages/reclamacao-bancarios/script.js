@@ -2,9 +2,9 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const heroBackgroundVideo = document.querySelector('.hero-background-video');
   const situationStrip = document.querySelector('.situation-strip');
-  const whatsappUrl = 'https://api.whatsapp.com/message/IVSTMA4FQGFDD1?autoload=1&app_absent=0';
+  const whatsappUrl = 'http://wa.me/+5511921023665';
 
-  document.querySelectorAll('a[href="https://wa.me/message/IVSTMA4FQGFDD1"]').forEach((link) => {
+  document.querySelectorAll('a[href="http://wa.me/+5511921023665"]').forEach((link) => {
     link.href = whatsappUrl;
   });
 

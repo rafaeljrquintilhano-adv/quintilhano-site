@@ -22,7 +22,7 @@ if (siteFooter && !siteFooter.querySelector('.footer-social')) {
       <a href="https://www.youtube.com/@quintilhano_advocacia" target="_blank" rel="noopener noreferrer" aria-label="YouTube da Quintilhano">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="4"></rect><path d="m10 9 5 3-5 3Z"></path></svg>
       </a>
-      <a href="https://api.whatsapp.com/message/IVSTMA4FQGFDD1?autoload=1&amp;app_absent=0" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da Quintilhano">
+      <a href="http://wa.me/+5511921023665" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp da Quintilhano">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11.6a8 8 0 0 1-11.8 7L4 20l1.4-4A8 8 0 1 1 20 11.6Z"></path><path d="M9 8.5c.5 2.8 2 4.3 4.7 5.2"></path><path d="m9 8.5.8-1 1.3 2-1 1"></path><path d="m13.7 13.7 1-1 2 1.2-1 1c-.7.6-1.3.4-2-.2"></path></svg>
       </a>
       <a href="https://br.linkedin.com/company/quintilhano-adv" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Quintilhano">
