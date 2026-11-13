@@ -486,7 +486,7 @@ body {
 /* Hero — imagem institucional com camada de contraste */
 .hero {
   background-color: #090909;
-  background-image: url("../../img/Plano de fundo-Home-Site.jpg");
+  background-image: url("../../img/plano-de-fundo.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;

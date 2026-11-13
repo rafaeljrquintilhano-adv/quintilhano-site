@@ -11,7 +11,7 @@
   overflow: hidden;
   min-height: 560px;
   color: #fff;
-  background: #090909 url("../../../img/Plano de fundo-Home-Site.jpg") center 47% / cover no-repeat;
+  background: #090909 url("../../../img/plano-de-fundo.webp") center 47% / cover no-repeat;
 }
 
 .contents-hero::before {

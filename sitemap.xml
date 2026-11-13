@@ -2,78 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://quintilhano.com/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/quem-somos.html</loc>
-    <lastmod>2026-08-30</lastmod>
-  </url>
-  <url>
-    <loc>https://quintilhano.com/politica-de-privacidade.html</loc>
-    <lastmod>2026-08-30</lastmod>
-  </url>
-  <url>
-    <loc>https://quintilhano.com/artigos/index.html</loc>
-    <lastmod>2026-08-30</lastmod>
-  </url>
-  <url>
-    <loc>https://quintilhano.com/artigos/planejamento-sucessorio.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/atuacao/civil.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/atuacao/criminal.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/atuacao/trabalhista.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/atuacao/previdenciario.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/atuacao/familia-sucessoes.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/atuacao/empresarial.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/atuacao/tributario.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/advogados/fabio-quintilhano.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/advogados/thais-gomes-de-melo-freire.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/advogados/gabriella-de-aguiar-santos.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/advogados/alice-de-paula-moraes-silva.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://quintilhano.com/prev/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <loc>https://quintilhano.com/artigos/index.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quintilhano.com/artigos/como-saber-se-ja-posso-me-aposentar.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quintilhano.com/artigos/inventario-documentos-e-etapas.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quintilhano.com/artigos/planejamento-sucessorio.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/landing-pages/auxilio-acidente/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://quintilhano.com/landing-pages/reclamacao-bancarios/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://quintilhano.com/politica-de-privacidade.html</loc>
+    <lastmod>2026-11-13</lastmod>
+    <priority>0.2</priority>
   </url>
 </urlset>

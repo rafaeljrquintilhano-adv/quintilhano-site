@@ -1,6 +1,6 @@
 .legal-page { background: #fff; }
 .legal-site-header { position: absolute; }
-.legal-hero { position: relative; min-height: 560px; overflow: hidden; color: #fff; background: #090909 url("../../../img/Plano de fundo-Home-Site.jpg") center 48% / cover no-repeat; }
+.legal-hero { position: relative; min-height: 560px; overflow: hidden; color: #fff; background: #090909 url("../../../img/plano-de-fundo.webp") center 48% / cover no-repeat; }
 .legal-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.94), rgba(0,0,0,.74)); }
 .legal-hero::after { content: "§"; position: absolute; right: 5%; bottom: -28%; color: transparent; font-family: var(--serif); font-size: 530px; line-height: 1; -webkit-text-stroke: 1px rgba(241,196,15,.2); }
 .legal-hero-inner { position: relative; z-index: 1; padding-top: 195px; padding-bottom: 85px; }
