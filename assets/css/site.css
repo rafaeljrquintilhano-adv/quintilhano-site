@@ -1161,3 +1161,9 @@ h1, h2, h3, .brand strong { font-optical-sizing: auto; }
   mask: url("../../img/simbolo.webp") center / contain no-repeat;
 }
 .intro-layer-logo img { opacity: 0; }
+
+/* Telas medias: o simbolo vira marca d'agua discreta atras do titulo */
+@media (max-width: 980px) {
+  .hero-logo img { opacity: .12; }
+  .hero-logo::before, .hero-logo::after { display: none; }
+}
