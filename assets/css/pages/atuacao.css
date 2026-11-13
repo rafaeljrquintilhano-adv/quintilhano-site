@@ -485,3 +485,5 @@
     width: 100%;
   }
 }
+
+.area-overview-copy .area-related a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; font-weight: 600; }

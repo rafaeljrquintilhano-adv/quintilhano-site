@@ -25,6 +25,11 @@ ErrorDocument 404 /404.html
   RewriteCond %{THE_REQUEST} \s/+prev/index\.html[\s?] [NC]
   RewriteRule ^prev/index\.html$ /prev/ [R=301,L,NE]
 
+  # Enderecos antigos do WordPress que o Google ainda conhece.
+  RewriteRule ^(?:.+/)?privacy-policy/?$ /politica-de-privacidade.html [R=301,L,NE]
+  RewriteRule ^teve-seu-beneficio-negado-ou-nao-sabe-se-ja-pode-se-aposentar-descubra-quais-sao-os-seus-direitos/?$ /atuacao/previdenciario.html [R=301,L,NE]
+  RewriteRule ^elementor-[0-9]+/?$ - [G,L]
+
   # Imagens antigas substituidas por versoes otimizadas (WebP).
   RewriteRule ^(?:landing-pages/auxilio-acidente|prev)/assets/(1|2|3|4|5|11|22|33|44|55)\.png$ /landing-pages/auxilio-acidente/assets/$1.webp [R=301,L,NE]
   RewriteRule ^img/Advogados/F.+bio\.png$ /img/equipe/fabio.webp [R=301,L,NE]
