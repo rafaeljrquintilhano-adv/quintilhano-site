@@ -8,7 +8,6 @@ does not need to change.
 - `pages/`: page-specific styles for institutional, lawyer, practice-area,
   article, and legal pages.
 - `landing-pages/`: styles for standalone landing pages.
-- `legacy/`: preserved previous-version styles.
 
 When editing styles, prefer changing the files in this folder and keep the
 entrypoint files as small `@import` wrappers.

@@ -25,6 +25,18 @@ ErrorDocument 404 /404.html
   RewriteCond %{THE_REQUEST} \s/+prev/index\.html[\s?] [NC]
   RewriteRule ^prev/index\.html$ /prev/ [R=301,L,NE]
 
+  # Imagens antigas substituidas por versoes otimizadas (WebP).
+  RewriteRule ^(?:landing-pages/auxilio-acidente|prev)/assets/(1|2|3|4|5|11|22|33|44|55)\.png$ /landing-pages/auxilio-acidente/assets/$1.webp [R=301,L,NE]
+  RewriteRule ^img/Advogados/F.+bio\.png$ /img/equipe/fabio.webp [R=301,L,NE]
+  RewriteRule ^img/Advogados/Thais\.png$ /img/equipe/thais.webp [R=301,L,NE]
+  RewriteRule ^img/Advogados/Gabriella\.png$ /img/equipe/gabriella.webp [R=301,L,NE]
+  RewriteRule ^img/Advogados/Alice\.jpg$ /img/equipe/alice.webp [R=301,L,NE]
+  RewriteRule ^img/Pr.+dio\ Sede\.png$ /img/predio-sede.webp [R=301,L,NE]
+  RewriteRule ^img/Plano\ de\ fundo-Home-Site\.jpg$ /img/plano-de-fundo.webp [R=301,L,NE]
+
+  # Remove do ar a copia antiga do WordPress.
+  RewriteRule ^legacy(?:/.*)?$ - [G,L]
+
   # Compatibilidade para recursos solicitados por versoes antigas/cacheadas da
   # landing em /prev/.
   RewriteRule ^prev/assets/(.+)$ landing-pages/auxilio-acidente/assets/$1 [L]
