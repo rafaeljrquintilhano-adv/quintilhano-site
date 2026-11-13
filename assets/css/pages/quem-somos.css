@@ -1,6 +1,6 @@
 .about-page { background: #fff; }
 .about-site-header { position: absolute; }
-.about-hero { position: relative; min-height: 720px; overflow: hidden; background: #090909 url("../../../img/plano-de-fundo.webp") center 48% / cover no-repeat; color: #fff; }
+.about-hero { position: relative; min-height: 720px; overflow: hidden; background: var(--hero-surface); background-color: #090909; color: #fff; }
 .about-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.94) 0%, rgba(0,0,0,.79) 56%, rgba(0,0,0,.6) 100%); }
 .about-hero-inner { position: relative; z-index: 2; padding-top: 195px; padding-bottom: 90px; }
 .about-breadcrumb { display: flex; gap: 11px; margin-bottom: 62px; color: #aaa99f; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
@@ -8,7 +8,7 @@
 .about-kicker { margin-bottom: 20px; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
 .about-hero h1 { max-width: 950px; margin: 0 0 30px; font-family: var(--serif); font-size: clamp(60px, 8vw, 102px); font-weight: 400; line-height: .94; letter-spacing: -.055em; }
 .about-hero-lead { max-width: 650px; margin: 0; color: #cecdc6; font-size: 19px; line-height: 1.65; }
-.about-hero-number { position: absolute; z-index: 1; right: -1%; bottom: -34%; color: transparent; font-family: Arial, sans-serif; font-size: clamp(500px, 62vw, 900px); font-weight: 900; line-height: 1; letter-spacing: -.1em; -webkit-text-stroke: 1px rgba(241,196,15,.2); animation: about-number-drift 7s ease-in-out infinite; }
+.about-hero-number { position: absolute; z-index: 1; right: -1%; bottom: -34%; color: transparent; font-family: Arial, sans-serif; font-size: clamp(500px, 62vw, 900px); font-weight: 900; line-height: 1; letter-spacing: -.1em; -webkit-text-stroke: 1px rgba(201,164,92,.2); animation: about-number-drift 7s ease-in-out infinite; }
 @keyframes about-number-drift { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
 .about-hero-inner > * { opacity: 0; transform: translateY(22px); animation: about-hero-enter .85s cubic-bezier(.22,1,.36,1) forwards; }
 .about-hero-inner > :nth-child(2) { animation-delay: .1s; }.about-hero-inner > :nth-child(3) { animation-delay: .2s; }.about-hero-inner > :nth-child(4) { animation-delay: .34s; }
@@ -36,7 +36,7 @@
 .about-values-heading > p, .about-audience-heading > p { max-width: 450px; margin: 0; color: #aaa99f; }
 .about-values-grid { display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .about-value { position: relative; min-height: 255px; overflow: hidden; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 30px; transition: background .3s ease, color .3s ease, transform .3s ease; }
-.about-value::after { content: ""; position: absolute; right: -70px; bottom: -70px; width: 150px; height: 150px; border: 1px solid rgba(241,196,15,.2); border-radius: 50%; transition: transform .45s ease; }
+.about-value::after { content: ""; position: absolute; right: -70px; bottom: -70px; width: 150px; height: 150px; border: 1px solid rgba(201,164,92,.2); border-radius: 50%; transition: transform .45s ease; }
 .about-value > span { color: var(--yellow); font-size: 10px; letter-spacing: .13em; }
 .about-value h3 { margin: 48px 0 16px; font-family: var(--serif); font-size: 31px; font-weight: 400; }
 .about-value p { max-width: 470px; margin: 0; color: #aaa99f; font-size: 13px; }
@@ -48,7 +48,7 @@
 .about-approach-copy h2 { margin-bottom: 30px; }
 .about-approach-copy > p:not(.section-number) { margin-bottom: 35px; color: #5a5953; font-size: 18px; line-height: 1.78; }
 .about-approach-visual { position: relative; display: grid; aspect-ratio: 1; place-items: center; background: #1b1b18; }
-.about-approach-visual::before, .about-approach-visual span { content: ""; position: absolute; border: 1px solid rgba(241,196,15,.28); border-radius: 50%; animation: about-ring 6s ease-in-out infinite; }
+.about-approach-visual::before, .about-approach-visual span { content: ""; position: absolute; border: 1px solid rgba(201,164,92,.28); border-radius: 50%; animation: about-ring 6s ease-in-out infinite; }
 .about-approach-visual::before { inset: 13%; }.about-approach-visual span { inset: 27%; animation-delay: -3s; }
 .about-approach-visual img { position: relative; z-index: 1; width: 38%; filter: drop-shadow(0 18px 30px rgba(0,0,0,.4)); }
 @keyframes about-ring { 0%,100% { transform: scale(.97); opacity: .45; } 50% { transform: scale(1.04); opacity: 1; } }

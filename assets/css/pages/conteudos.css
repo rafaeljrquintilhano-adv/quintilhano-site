@@ -11,7 +11,7 @@
   overflow: hidden;
   min-height: 560px;
   color: #fff;
-  background: #090909 url("../../../img/plano-de-fundo.webp") center 47% / cover no-repeat;
+  background: var(--hero-surface); background-color: #090909;
 }
 
 .contents-hero::before {
@@ -31,7 +31,7 @@
   font-size: 520px;
   font-weight: 900;
   line-height: 1;
-  -webkit-text-stroke: 1px rgba(241, 196, 15, .2);
+  -webkit-text-stroke: 1px rgba(201,164,92, .2);
   transform: rotate(-8deg);
 }
 

@@ -14,7 +14,7 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 77% 43%, rgba(241,196,15,.15), transparent 26%),
+    radial-gradient(circle at 77% 43%, rgba(201,164,92,.15), transparent 26%),
     linear-gradient(115deg, #090909 0%, #11110f 55%, #1d1c16 100%);
 }
 
@@ -28,7 +28,7 @@
   font-size: clamp(460px, 57vw, 820px);
   font-weight: 900;
   line-height: 1;
-  -webkit-text-stroke: 1px rgba(241,196,15,.13);
+  -webkit-text-stroke: 1px rgba(201,164,92,.13);
   transform: rotate(-8deg);
 }
 

@@ -11,7 +11,7 @@
   min-height: 680px;
   overflow: hidden;
   color: #fff;
-  background: #090909 url("../../../img/plano-de-fundo.webp") center 47% / cover no-repeat;
+  background: var(--hero-surface); background-color: #090909;
 }
 
 .article-hero::before {
@@ -30,7 +30,7 @@
   bottom: -46%;
   width: 620px;
   aspect-ratio: 1;
-  border: 1px solid rgba(241, 196, 15, .18);
+  border: 1px solid rgba(201,164,92, .18);
   border-radius: 50%;
 }
 
